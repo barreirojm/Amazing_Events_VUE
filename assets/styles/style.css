@@ -1,0 +1,269 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+header {
+  background-color: #9381ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 5px 6px;
+  width: 100%;
+}
+
+.logo {
+  width: 250px;
+  padding-top: 15px;
+  
+}
+
+.btn-hamburg {
+  margin-right: 25px !important;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 0 8px;
+}
+
+.btn-info {
+  background-color:#b8b8ff !important;
+  border-color: #9381ff !important;
+}
+
+.collapse {
+  padding: 0 25px;
+}
+
+.subheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: #b8b8ff;
+}
+
+/* fieldset {
+  flex-direction: row;
+  align-items: center;
+} */
+
+.contact-label {
+  margin-left: 10px;
+}
+
+.checkboxes {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar {
+  width: 70%;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 685px) {
+  #checkboxes {
+    flex-direction: column;
+    align-items:center;        
+  }
+
+  .class_checks {
+    width: 20px;
+    right: 25px;
+    vertical-align: middle;
+  }
+
+  label {  
+    width: 200px;
+    left: -20px;
+    vertical-align: middle;
+  }
+}
+
+main {
+  background-color: #f8f7ff;
+  /* width: 100%; */
+}
+
+body {
+  min-height: 100vh;
+}
+
+.padreEventos {
+  min-height: 100vh;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.eventos {
+  padding-bottom: 50px;
+  justify-content: space-evenly;
+  /* flex-grow: 1; */
+  
+}
+
+.card {
+  padding: 15px;
+}
+
+.primer-fila {
+  padding: 15px;
+}
+
+.segunda-fila {
+  padding: 15px;
+}
+
+.img-fit {
+  height: 300px;
+  object-fit:cover;
+}
+
+.container-img-detail {
+  height: 25rem;
+}
+
+.img-fit-detail {
+  height: 300px;
+  object-fit: cover;
+}
+
+.main-contact {
+  padding-bottom: 350px;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #b8b8ff;
+  padding: 25px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  /* position:absolute;
+  bottom:0;
+  width:100%;
+  margin-top: -200px; */
+}
+
+.cohort p {
+  font-size: 30px;
+}
+
+table {
+  empty-cells: show;
+  border: 1px solid;
+  border-collapse: collapse;
+  vertical-align: middle;
+  margin: 0;
+  table-layout:auto;
+  width: 100%;
+    
+}
+
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 2px 2px 2px 2px;
+  vertical-align: middle;
+  text-align: middle;
+  padding: 2px 2px 2px 2px;
+}
+
+th {
+  background-color: #ffd8be;
+}
+
+th p {
+  font-size: 22px;
+  /* vertical-align: bottom; */
+  margin-left: 10px;
+  margin-top: 5px;
+  
+}
+
+td p {
+  font-size: 18px;
+  vertical-align:middle;
+  text-align: center;
+}
+
+.planilla {
+  padding-bottom: 400px;
+  padding-top: 30px;
+  /* display: flex;
+  justify-content: center; */
+}
+
+#tablaUno {
+  margin-bottom: 25px;
+}
+
+#tablaDos {
+  margin-bottom: 25px;
+}
+
+.textos-planilla {
+  font-weight: bold;
+  font-style:italic;
+}
+
+/* .footer-stats {
+  padding-top: 400px;
+} */
+
+.main-detail {
+  min-height: 100vh;
+  /* display: flex; */
+}
+
+.subheader-detail {
+  text-align: center;
+  padding: 5px;
+  background-color: #b8b8ff;
+}
+
+#notFoundStyle {
+  min-height: 100vh;
+}
+
