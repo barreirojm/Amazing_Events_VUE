@@ -17,7 +17,7 @@
 
     <header>
         <figure>
-            <a href="#"><img class="logo" src=".//assets/images/Logo_Amazing_Events.png" alt="logo"></a>
+            <a href="./index.html"><img class="logo" src=".//assets/images/Logo_Amazing_Events.png" alt="logo"></a>
         </figure>
         <nav class="navbar navbar-expand-lg navbar-light">
 
@@ -29,10 +29,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link btn btn-info" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link btn btn-info" href="./index.html">Home <span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-info" href="./upcoming.html">Upcoming Events</a>
+                        <a class="nav-link btn btn-info" href="#">Upcoming Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn btn-info" href="./past.html">Past Events</a>
@@ -47,14 +48,14 @@
             </div>
         </nav>
     </header>
-    
-        <div id="app">
-            <main>
-                <div class="subheader">
-                    <a href="./stats.html"><i class="fa-solid fa-arrow-left"></i></a>
-                    <h1>Home</h1>
-                    <a href="./upcoming.html"><i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+
+    <div id="app">
+        <main>
+            <div class="subheader">
+                <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>
+                <h1>Upcoming Events</h1>
+                <a href="./past.html"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
 
             <div class="d-flex" id="checkboxes">
                 <fieldset v-if="categorias" v-for="each of categorias" class="checkboxes">
@@ -68,7 +69,7 @@
             </div>
 
             <div class="eventos d-flex flex-wrap" id="cardEvents">
-                <template v-for="evento of eventos">
+                <template v-for="evento of eventosFuturos">
                     <div class="card mt-4" style="width: 30rem;" >
                         <img v-bind:src="evento.image" class="card-img-top img-fit">
                         <div class="card-body">
@@ -81,10 +82,8 @@
                 </template>
             </div>
 
-            </main>
-        </div>
-
-    
+        </main>
+    </div>
 
     <footer class="footer">
         <div class="redes">
@@ -107,7 +106,6 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
     <script src="./assets/js/app.js"></script>
-        
 </body>
 
 
