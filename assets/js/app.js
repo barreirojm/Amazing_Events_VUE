@@ -22,6 +22,7 @@ const urlPast = 'https://mh.up.railway.app/api/amazing-events?time=past'
     created(){
         this.fetchApi()
     },
+    
     methods: {
         async fetchApi() {
             try {
