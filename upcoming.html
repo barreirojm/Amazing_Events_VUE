@@ -59,17 +59,17 @@
 
             <div class="d-flex" id="checkboxes">
                 <fieldset v-if="categorias" v-for="each of categorias" class="checkboxes">
-                    <input onclick="" class="class_checks contact-input" type="checkbox" :value="each" :name="each" :id="each">
+                    <input v-model="checks" v-on:change="filterDataUpcoming()" class="class_checks contact-input" type="checkbox" :value="each" :name="each" :id="each">
                     <label class="contact-label" :for="each">{{ each }}</label> 
                 </fieldset>
 
                 <div class=searchbar>
-                        <input onkeyup="" id="id_search" class="contact-input" type="text" name="texto" placeholder="search">
+                        <input v-model="text" v-on:keyup="filterDataUpcoming()" id="id_search" class="contact-input" type="text" name="texto" placeholder="search">
                 </div>
             </div>
 
             <div class="eventos d-flex flex-wrap" id="cardEvents">
-                <template v-for="evento of eventosFuturos">
+                <template v-if="eventosFuturosFiltrados" v-for="evento of eventosFuturosFiltrados">
                     <div class="card mt-4" style="width: 30rem;" >
                         <img v-bind:src="evento.image" class="card-img-top img-fit">
                         <div class="card-body">
