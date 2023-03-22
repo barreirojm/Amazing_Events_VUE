@@ -75,7 +75,7 @@
                                 <h5 class="card-title">{{evento.name}}</h5>
                                 <p class="card-text">{{evento.description}}</p>
                                 <p>Price: $ {{evento.price}}</p>
-                                <a href="#" class="btn btn-primary">More info</a>
+                                <a v-bind:href="'./details.html?id='+evento.id" class="btn btn-primary">More info</a>
                             </div>
                         </div>
                     </template>

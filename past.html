@@ -69,14 +69,34 @@
             </div>
 
             <div class="eventos d-flex flex-wrap" id="cardEvents">
-                <template v-if="eventosPasadosFiltrados" v-for="evento of eventosPasadosFiltrados">
+                <template v-if="eventosPasadosFiltrados.length" v-for="evento of eventosPasadosFiltrados">
                     <div class="card mt-4" style="width: 30rem;" >
                         <img v-bind:src="evento.image" class="card-img-top img-fit">
                         <div class="card-body">
                             <h5 class="card-title">{{evento.name}}</h5>
                             <p class="card-text">{{evento.description}}</p>
                             <p>Price: $ {{evento.price}}</p>
-                            <a href="#" class="btn btn-primary">More info</a>
+                            <a v-bind:href="'./details.html?id='+evento.id" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </template>
+                <template v-else="eventosPasadosFiltrados.length">
+                    <div id="notFoundStyle">
+                        <div class="container-card d-flex justify-content-center">
+                            <div class="card mb-3 mt-5 " style="max-width: 1440px;">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-md-6">
+                                        <img src=".//assets/images/notFound.jpg" class="card-img img-fit-detail" alt="...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Event not found!</h4>
+                                            <h5 class="card-text">We are sorry.</h5>
+                                            <button onclick="window.location.reload();" class="btn btn-primary">Try again!</button>                                 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </template>
