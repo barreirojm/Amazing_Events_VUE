@@ -61,7 +61,7 @@
 
         <div class="planilla">
             
-                <table  id="tablaUno">
+                <table id="tablaUno">
                     <colgroup span="3" class="columns"></colgroup>
                     <tr>
                         <th colspan="3">
@@ -87,7 +87,7 @@
                             <p>{{ eventos[eventos.length-1].name }}</p>
                         </td>
                         <td>
-                            <p>{{ eventos2[0].name }}</p>
+                            <p>{{ eventos[0].name }}</p>
                         </td>
                     </tr> 
                     <tr>
@@ -98,19 +98,63 @@
                             <p>{{ eventos[eventos.length-1].assistance }}</p>
                         </td>
                         <td>
-                            <p>{{ eventos2[0].capacity }}</p>
+                            <p>{{ eventos[0].capacity }}</p>
                         </td>
                     </tr>
                 </table>
 
             
                 <table id="tablaDos">
+
+                    <colgroup span="3" class="columns"></colgroup>
+                        <tr>
+                            <th colspan="3">
+                                <p class="textos-planilla">Upcoming events statistics by category</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">
+                                <p class="textos-planilla">Categories</p>
+                            </td>
+                            <td>
+                                <p class="textos-planilla">Revenues (estimated)</p>
+                            </td>
+                            <td>
+                                <p class="textos-planilla">Percentage of attendance (estimated)</p>
+                            </td>
+                        </tr>
+                        <tr v-if="arrayCategories.length" v-for="each of arrayCategories" >
+                            <td><p>{{ each.category }}</p></td>
+                            <td><p>$ {{ each.gain }}</p></td>
+                            <td><p>{{ each.percentEstimate }} %</p></td>
+                        </tr>
                     
                 </table>            
 
 
                 <table id="tablaTres">
-                    
+                    <colgroup span="3" class="columns"></colgroup>
+                        <tr>
+                            <th colspan="3">
+                                <p class="textos-planilla">Past events statistic by category</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">
+                                <p class="textos-planilla">Categories</p>
+                            </td>
+                            <td>
+                                <p class="textos-planilla">Revenues</p>
+                            </td>
+                            <td>
+                                <p class="textos-planilla">Percentage of attendance</p>
+                            </td>
+                        </tr>
+                        <tr v-if="arrayCategories2.length" v-for="each of arrayCategories2">
+                            <td><p>{{ each.category }}</p></td>
+                            <td><p>$ {{ each.gain }}</p></td>
+                            <td><p>{{ each.percentAssistance }} %</p></td>
+                        </tr>
                 </table>                
             
         </div>
