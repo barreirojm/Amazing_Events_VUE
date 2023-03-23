@@ -7,14 +7,27 @@ const urlPast = 'https://mh.up.railway.app/api/amazing-events?time=past'
 const app = createApp({
     data(){         /* funcion que define los estados (propiedades reactivas) de la aplicación */
         return {
-            /* clave: valor */
+            eventos: [],
+            eventos2: []
         }
     },
-    created() {     /* hook con las funciones que se ejecutan luego de cargar las variables de estado */
-        /* ejecuto funcion() */
+    created() { 
+        this.tablaUno()
     },
-    methods: {      /* objeto con todos los métodos que necesita la app (fetch/filter/etc) */
-        /* defino funcion */
+    methods: { 
+        async tablaUno() {
+            try {
+                let response = await fetch(urlPast)
+                response = await response.json()
+                this.eventos = response.events
+                this.eventos2 = response.events
+                this.eventos = this.eventos.sort((ev1, ev2) => ev2.assistance - ev1.assistance)
+                console.log(this.eventos);
+            }
+            catch(error){
+                console.log(error);
+            }
+        }
     },
     computed: {     /* objeto con todos los métodos que se ejectuan automaticamente cuando CAMBIA un estado */
     }
